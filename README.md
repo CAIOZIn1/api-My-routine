@@ -14,10 +14,14 @@
 
 <p> Passo 2 - Rodar uma imagem Postgres no docker</p>
 
-> docker run -p 5432:5432 -e POSTGRES_PASSWORD=123456 -d postgres
+> docker run -p {port}:{port} -e POSTGRES_PASSWORD={sua_senha} -d postgres
 
 </br>
 
 <p> Passo 3 - Criar tabela no banco</p>
 
-> pnpm sequelize db:create
+> pnpm run:create
+
+<p> Passo 4 - Rodar a migration </p>
+
+> pnpm run:migration
